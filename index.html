@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challuri Nanda Kishore | Portfolio</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f6f8;
+        }
+
+        header {
+            background-color: #0077b5;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Top Navigation Tabs */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            background: #222;
+        }
+
+        .nav-tab {
+            padding: 15px 20px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .nav-tab.active {
+            background: #0077b5;
+        }
+
+        .main-content {
+            display: none;
+        }
+
+        .main-content.active {
+            display: block;
+        }
+
+        section {
+            max-width: 900px;
+            margin: 20px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #0077b5;
+        }
+
+        /* Certification Tabs */
+        .tabs {
+            display: flex;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .tab {
+            padding: 10px 15px;
+            background: #ddd;
+            margin-right: 5px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .tab.active {
+            background: #0077b5;
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 0 5px 5px 5px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #222;
+            color: white;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Challuri Nanda Kishore</h1>
+    <p>B.Tech CSE | Student at SR University | Graduation: 2027</p>
+</header>
+
+<!-- Navigation Tabs -->
+<div class="nav-tabs">
+    <div class="nav-tab active" onclick="openMain(0)">Portfolio</div>
+    <div class="nav-tab" onclick="openMain(1)">Resume</div>
+</div>
+
+<!-- Portfolio Content -->
+<div class="main-content active">
+
+<section>
+    <h2>About Me</h2>
+    <p>
+        I am a Computer Science Engineering student at SR University with strong interest in 
+        programming, cloud technologies, and software development. I am continuously learning 
+        and improving my skills.
+    </p>
+</section>
+
+<section>
+    <h2>Education</h2>
+    <p>
+        B.Tech in Computer Science Engineering <br>
+        SR University <br>
+        Expected Graduation: 2027
+    </p>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <ul>
+        <li>Python</li>
+        <li>C Programming</li>
+        <li>MongoDB</li>
+        <li>OpenMP</li>
+        <li>HTML & CSS</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Certifications</h2>
+
+    <div class="tabs">
+        <div class="tab active" onclick="openTab(0)">Python</div>
+        <div class="tab" onclick="openTab(1)">Software Engineering</div>
+        <div class="tab" onclick="openTab(2)">AWS</div>
+    </div>
+
+    <div class="tab-content active">
+        <p><b>Python for Data Science</b><br>
+        Issued by: Salor Academy</p>
+    </div>
+
+    <div class="tab-content">
+        <p><b>Software Engineering</b><br>
+        Issued by: Infosys Springboard</p>
+    </div>
+
+    <div class="tab-content">
+        <p><b>AWS Training Badge</b><br>
+        Cloud Developer<br>
+        Cloud Web Application</p>
+    </div>
+
+</section>
+
+</div>
+
+<!-- Resume Content -->
+<div class="main-content">
+    <section>
+        <h2>My Resume</h2>
+        <iframe src="resume.pdf"></iframe>
+    </section>
+</div>
+
+<footer>
+    <p>© 2026 Challuri Nanda Kishore</p>
+</footer>
+
+<script>
+    function openMain(index) {
+        let tabs = document.querySelectorAll(".nav-tab");
+        let contents = document.querySelectorAll(".main-content");
+
+        tabs.forEach(tab => tab.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+
+        tabs[index].classList.add("active");
+        contents[index].classList.add("active");
+    }
+
+    function openTab(index) {
+        let tabs = document.querySelectorAll(".tab");
+        let contents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => tab.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+
+        tabs[index].classList.add("active");
+        contents[index].classList.add("active");
+    }
+</script>
+
+</body>
+</html>
